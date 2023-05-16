@@ -1,0 +1,23 @@
+class Solution {
+public:
+    int maximumWealth(vector<vector<int>>& accounts) {
+        
+        int i , j=0,count=0,countmax=0;
+
+        for(i=0;i<accounts.size();i++){
+
+            for(j=0;j<accounts[i].size();j++){
+
+                    count += accounts[i][j];
+
+            }
+            if (count>countmax){
+                countmax=count;
+            }
+
+            count = 0;
+
+        }
+        return countmax;
+    }
+};
